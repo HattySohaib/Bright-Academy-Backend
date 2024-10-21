@@ -71,6 +71,3 @@ This will start the server using `nodemon` on the port specified in the `.env` f
 ## License
 
 This project is licensed under the ISC License.
-```
-
-You can further customize this README as needed.
