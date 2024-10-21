@@ -1,6 +1,4 @@
-Based on the retrieved information from the `package.json` file, here is a suggested `README.md` for your Node.js backend project:
 
-```
 # Bright Academy Backend
 
 This is the backend service for the Bright Academy application, implemented using Node.js and Express.
