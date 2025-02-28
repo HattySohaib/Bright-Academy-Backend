@@ -1,4 +1,5 @@
 import express from "express";
+import upload from "../config/multer.js";
 import {
   createStudyMaterial,
   getMaterialsByChapterId,
@@ -6,7 +7,7 @@ import {
 
 const router = express.Router();
 
-router.post("/", createStudyMaterial);
+router.post("/", upload.single("file"), createStudyMaterial);
 router.get("/chapter/:chapterId", getMaterialsByChapterId);
 
 export default router;

@@ -32,7 +32,7 @@ export const createUser = async (req, res) => {
     } catch (err) {
       console.log("Mongo ERROR: ", err);
     }
-    res.status(201).json({ message: "User created successfully" });
+    res.status(200).json({ message: "User created successfully" });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

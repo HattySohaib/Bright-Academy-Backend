@@ -30,3 +30,23 @@ export const getAllBoards = async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 };
+
+export const editBoard = async (req, res) => {
+  try {
+    const board = await Board.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
+    res.json(board);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
+export const deleteBoard = async (req, res) => {
+  try {
+    const board = await Board.findByIdAndDelete(req.params.id);
+    res.json(board);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};

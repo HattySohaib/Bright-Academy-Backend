@@ -18,3 +18,23 @@ export const getExamsByBoardId = async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 };
+
+export const editExam = async (req, res) => {
+  try {
+    const exam = await Exam.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
+    res.json(exam);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
+export const deleteExam = async (req, res) => {
+  try {
+    const exam = await Exam.findByIdAndDelete(req.params.id);
+    res.json(exam);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
