@@ -22,7 +22,6 @@ const seedData = async () => {
     await connectDB();
 
     // Clear existing data
-    await User.deleteMany();
     await Board.deleteMany();
     await Exam.deleteMany();
     await Subject.deleteMany();

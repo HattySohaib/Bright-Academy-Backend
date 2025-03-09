@@ -15,7 +15,6 @@ export const createSubject = async (req, res) => {
 export const getSubjectsByExamId = async (req, res) => {
   try {
     const { examId } = req.params;
-
     const subjects = await Subject.find({ exam_id: examId });
 
     const subjectData = await Promise.all(

@@ -25,6 +25,7 @@ export const loginUser = async (req, res) => {
 
     const userId = user._id;
 
+    console.log("User login", user);
     // Send response with token
     res.json({ token, userId });
   } catch (error) {
